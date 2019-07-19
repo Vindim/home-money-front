@@ -4,8 +4,9 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
-import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {UserService} from './shared/services/user.service';
+import {AuthService} from './shared/services/auth.service';
 
 @NgModule({
     declarations: [
@@ -13,12 +14,11 @@ import {HttpClientModule} from '@angular/common/http';
     ],
     imports: [
         BrowserModule,
-        FormsModule,
         HttpClientModule,
         AppRoutingModule,
         AuthModule
     ],
-    providers: [],
+    providers: [UserService, AuthService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
