@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Bill} from '../models/bill.model';
 import {map} from 'rxjs/operators';
@@ -16,7 +16,9 @@ export class BillService extends BaseApi {
     }
 
     getCurrency(base: string = 'rub'): Observable<any> {
-        return this.http.get(`http://www.floatrates.com/daily/${base}.json`).pipe(
+        const headers = new HttpHeaders();
+        headers.append('Access-Control-Allow-Origin', '*');
+        return this.http.get(`http://www.floatrates.com/daily/${base}.json`, {headers}).pipe(
             map((res) => {
                 return res;
             })

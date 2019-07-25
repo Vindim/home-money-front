@@ -5,9 +5,10 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class BaseApi {
-    private baseUrl = 'http://www.floatrates.com/daily/rub.json';
+    baseUrl = 'http://localhost:3000/';
 
-    constructor(public http: HttpClient) {}
+    constructor(public http: HttpClient) {
+    }
 
     private getUrl(url: string): string {
         return this.baseUrl + url;

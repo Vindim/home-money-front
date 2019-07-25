@@ -11,7 +11,7 @@ export class UserService extends BaseApi {
         super(http);
     }
 
-    getUserByEmail(email: string): Observable<User> {
+    getUserByEmail(email: string): Observable<User[]> {
         return this.get(`users?email=${email}`);
     }
 
