@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UserService} from '../../shared/services/user.service';
 import {User} from '../../shared/models/user.model';
 import {Router} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'home-registration',
@@ -13,7 +14,12 @@ export class RegistrationComponent implements OnInit {
 
     form: FormGroup;
 
-    constructor(private userService: UserService, private router: Router) {
+    constructor(
+        private userService: UserService,
+        private router: Router,
+        private title: Title
+    ) {
+        title.setTitle('Регистрация');
     }
 
     ngOnInit() {

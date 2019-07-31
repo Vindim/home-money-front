@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {EventsService} from '../../shared/services/events.service';
 import {CategoriesService} from '../../shared/services/categories.service';
@@ -10,7 +10,8 @@ import {Subscription} from 'rxjs';
 @Component({
     selector: 'home-history-detail',
     templateUrl: './history-detail.component.html',
-    styleUrls: ['./history-detail.component.scss']
+    styleUrls: ['./history-detail.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class HistoryDetailComponent implements OnInit, OnDestroy {
 

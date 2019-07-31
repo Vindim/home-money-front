@@ -1,11 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Category} from '../shared/models/category.model';
 import {CategoriesService} from '../shared/services/categories.service';
 
 @Component({
     selector: 'home-records-page',
     templateUrl: './records-page.component.html',
-    styleUrls: ['./records-page.component.scss']
+    styleUrls: ['./records-page.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class RecordsPageComponent implements OnInit {
 

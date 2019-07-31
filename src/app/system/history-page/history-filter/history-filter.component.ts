@@ -1,10 +1,11 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
 import {Category} from '../../shared/models/category.model';
 
 @Component({
     selector: 'home-history-filter',
     templateUrl: './history-filter.component.html',
-    styleUrls: ['./history-filter.component.scss']
+    styleUrls: ['./history-filter.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class HistoryFilterComponent {
 

@@ -9,20 +9,23 @@ import {UserService} from './shared/services/user.service';
 import {AuthService} from './shared/services/auth.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import {AuthGuard} from './shared/services/auth.guard';
+import {NotFoundComponent} from './shared/components/not-found/not-found.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        NotFoundComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        AppRoutingModule,
         AuthModule,
+        AppRoutingModule,
         NgxChartsModule
     ],
-    providers: [UserService, AuthService],
+    providers: [UserService, AuthService, AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

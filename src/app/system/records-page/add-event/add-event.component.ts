@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {Category} from '../../shared/models/category.model';
 import {NgForm} from '@angular/forms';
 import {HomeEvent} from '../../shared/models/event.model';
@@ -13,7 +13,8 @@ import {Subscription} from 'rxjs';
 @Component({
     selector: 'home-add-event',
     templateUrl: './add-event.component.html',
-    styleUrls: ['./add-event.component.scss']
+    styleUrls: ['./add-event.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class AddEventComponent implements OnInit, OnDestroy {
 

@@ -1,11 +1,12 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Category} from '../../shared/models/category.model';
 import {HomeEvent} from '../../shared/models/event.model';
 
 @Component({
     selector: 'home-history-events',
     templateUrl: './history-events.component.html',
-    styleUrls: ['./history-events.component.scss']
+    styleUrls: ['./history-events.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class HistoryEventsComponent implements OnInit {
 

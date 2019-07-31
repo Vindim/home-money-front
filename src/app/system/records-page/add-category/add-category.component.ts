@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, Output, ViewEncapsulation} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {CategoriesService} from '../../shared/services/categories.service';
 import {Category} from '../../shared/models/category.model';
@@ -7,7 +7,8 @@ import {Subscription} from 'rxjs';
 @Component({
     selector: 'home-add-category',
     templateUrl: './add-category.component.html',
-    styleUrls: ['./add-category.component.scss']
+    styleUrls: ['./add-category.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class AddCategoryComponent implements OnDestroy {
 
