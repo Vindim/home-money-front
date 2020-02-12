@@ -64,7 +64,8 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "home-money:build"
+                        "browserTarget": "home-money:build",
+                        "port": 4210
                     },
                     "configurations": {
                         "production": {
